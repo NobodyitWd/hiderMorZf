@@ -62,9 +62,9 @@ if mod == "Z" and row == "R":
     hided = input("Input path + redacted IMAGE:   ")
 
     dot = hided.index(".")
-    z = hided[:dot]+".zip"
+    z = hided[:dot]+"-hided"+".zip"
 
-    hzip = open("hided-"+z,"wb") # Заменим расширение на zip. Иначе наш зип архив будет иметь расширение png\jpg
+    hzip = open(z,"wb") # Заменим расширение на zip. Иначе наш зип архив будет иметь расширение png\jpg
     hzip.write(Printer(hided)) # Создадим новый зип файл из выгруженных данных из изображения.
     hzip.close()
 else:
